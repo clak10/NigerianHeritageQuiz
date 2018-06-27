@@ -1,0 +1,1088 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAppBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/main_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/national_assembly_small" />
+
+
+        <TextView
+            android:id="@+id/title_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="205dp"
+            android:background="@color/colorPrimary"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:text="@string/quiz_title"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_image"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/shadow"
+                android:elevation="2dp">
+
+                <View
+                    android:id="@+id/q1_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="197dp"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/question1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    android:text="1. What is the meaning of the green in the Nigeria flag?"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/question1"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/textColorSecondary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider1"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_weight="2">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q1_option1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Unity"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q1_option2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onCorrectRadioClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Agriculture"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q1_option3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Prosperity"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q1_option4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Non of the above"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+                    </RadioGroup>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/flag" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/shadow"
+                android:elevation="2dp">
+
+                <View
+                    android:id="@+id/q2_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="217dp"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/question2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    android:text="2. Which of these words below is not found on the Nigerian coat of arms?"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/question2"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/textColorSecondary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider2"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_weight="2">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q2_option1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Unity"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q2_option2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Faith"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q2_option3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Progress"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q2_option4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onCorrectRadioClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Non of the above"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+                    </RadioGroup>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/nigerian_coat_of_arms" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/shadow"
+                android:elevation="2dp">
+
+                <View
+                    android:id="@+id/q3_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="197dp"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/question3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="3. What is the geographical area of Nigeria?"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/question3"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/textColorSecondary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider3"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_weight="2">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q3_option1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="356,669sq km"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q3_option2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="823,768sq km"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q3_option3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onCorrectRadioClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="923,768sq km"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q3_option4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Non of the above"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+                    </RadioGroup>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/map_of_nigeria" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/shadow"
+                android:elevation="2dp">
+
+                <View
+                    android:id="@+id/q4_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/question4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="4. Who discovered the river Niger?"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/question4"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/textColorSecondary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider4"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_weight="2">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q4_option1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Mary Slessor"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q4_option2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onCorrectRadioClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Mongo Park"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q4_option3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Frederick Lugard"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q4_option4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:text="Non of the above"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+                    </RadioGroup>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/niger_bridge" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/shadow"
+                android:elevation="2dp">
+
+                <View
+                    android:id="@+id/q5_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="197dp"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/question5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="5. Which river is the longest in Nigeria?"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/divider5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/question5"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/textColorSecondary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider5"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_weight="2">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q5_option1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onCorrectRadioClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Niger River"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q5_option2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Benue River"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q5_option3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Kaduna River"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q5_option4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Imo River"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+                    </RadioGroup>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/rivers" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/shadow"
+                android:elevation="2dp">
+
+                <View
+                    android:id="@+id/q6_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="197dp"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/question6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    android:text="6. Which year did the Nigerian civil war end?"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/divider6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/question6"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/textColorSecondary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider6"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_weight="2">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q6_option1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="1967"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q6_option2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="1968"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q6_option3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="1969"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q6_option4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onCorrectRadioClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="1970"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+                    </RadioGroup>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/civil_wars" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/shadow"
+                android:elevation="2dp">
+
+                <View
+                    android:id="@+id/q7_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="207dp"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/question7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="7. Which of these are ancient Nigerian empire?"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/divider7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/question7"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/textColorSecondary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider7"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/q7_option1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Kingdom of Nri"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <CheckBox
+                            android:id="@+id/q7_option2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="10dp"
+                            android:text="Ife Kingdom"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <CheckBox
+                            android:id="@+id/q7_option3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Kanem-Bornu Empire"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <CheckBox
+                            android:id="@+id/q7_option4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Hausa Kingdom"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/kingdom_of_nri" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/shadow"
+                android:elevation="2dp">
+
+                <View
+                    android:id="@+id/q8_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="197dp"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/question8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="8. The popular Benin ivory mask is a sculptural portrait of?"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/divider8"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/question8"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/textColorSecondary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider8"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_weight="2">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q8_option1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onCorrectRadioClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Queen Mother Idia"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q8_option2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Oba Esigie"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q8_option3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Oba Erediauwa"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q8_option4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Oduduwa"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+                    </RadioGroup>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/queen_mother_mask" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/shadow"
+                android:elevation="2dp">
+
+                <View
+                    android:id="@+id/q9_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="197dp"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/question9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="9. Who were the first Europeans to trade in Nigeria?"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/divider9"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/question9"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/textColorSecondary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider9"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_weight="2">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q9_option1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="English"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q9_option2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onCorrectRadioClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Portuguese"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q9_option3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Spanish"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/q9_option4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onWrongRadioBoxClicked"
+                            android:paddingLeft="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Non of the above"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="17sp" />
+                    </RadioGroup>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/euro_traders" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/shadow"
+                android:elevation="2dp">
+
+                <View
+                    android:id="@+id/q10_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="197dp"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/question10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="10. Where was the first commercial oilfield in Nigeria located?"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/divider10"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/question10"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/textColorSecondary" />
+
+                <EditText
+                    android:id="@+id/q10_EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider10"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:hint="@string/edit_hint"
+                    android:maxLines="1"
+                    android:paddingBottom="40dp"
+                    android:paddingTop="40dp"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorAppBackground"/>
+
+                <Button
+                    android:id="@+id/reset_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:onClick="resetQuiz"
+                    android:text="@string/reset_button_text"
+                    android:theme="@style/button_Theme" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/colorAppBackground"/>
+
+                <Button
+                    android:id="@+id/submit_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:onClick="submitScore"
+                    android:text="@string/submit_button_text"
+                    android:theme="@style/button_Theme" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorAppBackground"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
