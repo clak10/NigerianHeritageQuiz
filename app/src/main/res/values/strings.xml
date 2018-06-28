@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Nigerian Heritage Quiz</string>
-    <string name="start_button_text">Start</string>
     <string name="quiz_title">Nigerian Heritage Quiz</string>
     <string name="submit_button_text">Submit</string>
     <string name="edit_hint">Type answer here</string>

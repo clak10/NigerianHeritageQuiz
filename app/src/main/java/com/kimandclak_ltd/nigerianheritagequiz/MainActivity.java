@@ -1,5 +1,6 @@
 package com.kimandclak_ltd.nigerianheritagequiz;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -10,30 +11,31 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayDeque;
+import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.Set;
 
 public class MainActivity extends Activity {
     static final String STATE_SCORE = "playerScore";
     int quizScore;
-    LinkedList<View> radioGroupList;
-    boolean checked;
-    int counter = 0;
-    private ArrayDeque<String> qList;
+    private LinkedList<View> radioGroupList;
+    private Set<String> questionAttempted;
+    private Set<String> questionFailed;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         quizScore = 0;
-        qList = new ArrayDeque<>();
+        questionFailed = new HashSet<>();
+        questionAttempted = new HashSet<>();
         radioGroupList = new LinkedList<>();
     }
 
     public void onRestoreInstanceState(Bundle savedInstanceState) {
-        // Always call the superclass so it can restore the view hierarchy
         super.onRestoreInstanceState(savedInstanceState);
 
         // Restore state members from saved instance
@@ -42,7 +44,7 @@ public class MainActivity extends Activity {
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
-        // Save the user's current quiz state
+        // Save the user's current quiz score
         savedInstanceState.putInt(STATE_SCORE, quizScore);
 
         super.onSaveInstanceState(savedInstanceState);
@@ -76,44 +78,36 @@ public class MainActivity extends Activity {
         //Removes question with correct answer once only.
         int idNumber = currentRB.getId();
         if (idNumber <= R.id.q1_option4) {
-            if (qList.contains("q1")) {
-                qList.remove("q1");
-            }
+            questionFailed.remove("q1");
+            questionAttempted.add("q1");
         }
         if (idNumber > R.id.q1_option4 && idNumber <= R.id.q2_option4) {
-            if (qList.contains("q2")) {
-                qList.remove("q2");
-            }
+            questionFailed.remove("q2");
+            questionAttempted.add("q2");
         }
         if (idNumber > R.id.q2_option4 && idNumber <= R.id.q3_option4) {
-            if (qList.contains("q3")) {
-                qList.remove("q3");
-            }
+            questionFailed.remove("q3");
+            questionAttempted.add("q3");
         }
         if (idNumber > R.id.q3_option4 && idNumber <= R.id.q4_option4) {
-            if (qList.contains("q4")) {
-                qList.remove("q4");
-            }
+            questionFailed.remove("q4");
+            questionAttempted.add("q4");
         }
         if (idNumber > R.id.q4_option4 && idNumber <= R.id.q5_option4) {
-            if (qList.contains("q5")) {
-                qList.remove("q5");
-            }
+            questionFailed.remove("q5");
+            questionAttempted.add("q5");
         }
         if (idNumber > R.id.q5_option4 && idNumber <= R.id.q6_option4) {
-            if (qList.contains("q6")) {
-                qList.remove("q6");
-            }
+            questionFailed.remove("q6");
+            questionAttempted.add("q6");
         }
         if (idNumber > R.id.q7_option4 && idNumber <= R.id.q8_option4) {
-            if (qList.contains("q8")) {
-                qList.remove("q8");
-            }
+            questionFailed.remove("q8");
+            questionAttempted.add("q8");
         }
         if (idNumber > R.id.q8_option4 && idNumber <= R.id.q9_option4) {
-            if (qList.contains("q9")) {
-                qList.remove("q9");
-            }
+            questionFailed.remove("q9");
+            questionAttempted.add("q9");
         }
     }
 
@@ -130,45 +124,38 @@ public class MainActivity extends Activity {
         }
         //Registers question with incorrect answer once only.
         int idNumber = currentRB.getId();
-        if (idNumber <= 2131165290) {
-            if (!qList.contains("q1")) {
-                qList.add("q1");
-            }
+        if (idNumber <= R.id.q1_option4) {
+            questionFailed.add("q1");
+            questionAttempted.add("q1");
         }
         if (idNumber > R.id.q1_option4 && idNumber <= R.id.q2_option4) {
-            if (!qList.contains("q2")) {
-                qList.add("q2");
-            }
+            questionFailed.add("q2");
+            questionAttempted.add("q2");
         }
         if (idNumber > R.id.q2_option4 && idNumber <= R.id.q3_option4) {
-            if (!qList.contains("q3")) {
-                qList.add("q3");
-            }
+            questionFailed.add("q3");
+            questionAttempted.add("q3");
+
         }
         if (idNumber > R.id.q3_option4 && idNumber <= R.id.q4_option4) {
-            if (!qList.contains("q4")) {
-                qList.add("q4");
-            }
+            questionFailed.add("q4");
+            questionAttempted.add("q4");
         }
         if (idNumber > R.id.q4_option4 && idNumber <= R.id.q5_option4) {
-            if (!qList.contains("q5")) {
-                qList.add("q5");
-            }
+            questionFailed.add("q5");
+            questionAttempted.add("q5");
         }
         if (idNumber > R.id.q5_option4 && idNumber <= R.id.q6_option4) {
-            if (!qList.contains("q6")) {
-                qList.add("q6");
-            }
+            questionFailed.add("q6");
+            questionAttempted.add("q6");
         }
         if (idNumber >= R.id.q8_option1 && idNumber <= R.id.q8_option4) {
-            if (!qList.contains("q8")) {
-                qList.add("q8");
-            }
+            questionFailed.add("q8");
+            questionAttempted.add("q8");
         }
         if (idNumber > R.id.q8_option4 && idNumber <= R.id.q9_option4) {
-            if (!qList.contains("q9")) {
-                qList.add("q9");
-            }
+            questionFailed.add("q9");
+            questionAttempted.add("q9");
         }
 
     }
@@ -176,45 +163,75 @@ public class MainActivity extends Activity {
     /**
      * Indicates the question with wrong answers
      */
+    @SuppressLint("SetTextI18n")
     private void indicateInCorrect(String qNumber) {
         int n;
+        int correctAns;
         switch (qNumber) {
             case "q1":
                 n = R.id.q1_view;
+                correctAns = R.id.q1_option2;
                 break;
             case "q2":
                 n = R.id.q2_view;
+                correctAns = R.id.q2_option4;
                 break;
             case "q3":
                 n = R.id.q3_view;
+                correctAns = R.id.q3_option3;
                 break;
             case "q4":
                 n = R.id.q4_view;
+                correctAns = R.id.q4_option2;
                 break;
             case "q5":
                 n = R.id.q5_view;
+                correctAns = R.id.q5_option1;
                 break;
             case "q6":
                 n = R.id.q6_view;
+                correctAns = R.id.q6_option4;
                 break;
             case "q7":
                 n = R.id.q7_view;
+                correctAns = R.id.question7;
                 break;
             case "q8":
                 n = R.id.q8_view;
+                correctAns = R.id.q8_option1;
                 break;
             case "q9":
                 n = R.id.q9_view;
+                correctAns = R.id.q9_option2;
                 break;
             case "q10":
                 n = R.id.q10_view;
+                correctAns = R.id.question10;
                 break;
             default:
                 n = 0;
+                correctAns = 0;
         }
         if (!(n == 0)) {
             View qView = findViewById(n);
             qView.setBackgroundColor(0xFFFAB9B9);
+            if (correctAns == R.id.question10) {
+                TextView displayAns = findViewById(R.id.display_ans_q10);
+                displayAns.setText("Correct Answer: Oloibiri");
+            } else if (correctAns == R.id.question7) {
+                CheckBox q7Option1 = findViewById(R.id.q7_option1);
+                CheckBox q7Option2 = findViewById(R.id.q7_option2);
+                CheckBox q7Option3 = findViewById(R.id.q7_option3);
+                CheckBox q7Option4 = findViewById(R.id.q7_option4);
+                q7Option1.setBackgroundColor(0xFF8DBC8F);
+                q7Option2.setBackgroundColor(0xFF8DBC8F);
+                q7Option3.setBackgroundColor(0xFF8DBC8F);
+                q7Option4.setBackgroundColor(0xFF8DBC8F);
+            } else {
+                RadioButton correctRB = findViewById(correctAns);
+                correctRB.setBackgroundColor(0xFF8DBC8F);
+            }
+
         }
     }
 
@@ -228,10 +245,14 @@ public class MainActivity extends Activity {
         CheckBox q7Option3 = findViewById(R.id.q7_option3);
         CheckBox q7Option4 = findViewById(R.id.q7_option4);
         if (q7Option1.isChecked() && q7Option2.isChecked() && q7Option3.isChecked() && q7Option4.isChecked()) {
+            questionAttempted.add("q7");
             increaseScoreByOne();
         } else {
-            if (q7Option1.isChecked() || q7Option2.isChecked() || q7Option3.isChecked() || q7Option4.isChecked())
-                qList.add("q7");
+            if (q7Option1.isChecked() || q7Option2.isChecked() || q7Option3.isChecked() || q7Option4.isChecked()) {
+                questionAttempted.add("q7");
+                questionFailed.add("q7");
+
+            }
 
         }
 
@@ -240,44 +261,51 @@ public class MainActivity extends Activity {
         String answerText = answerTextView.getText().toString();
         answerText = answerText.toLowerCase();
         answerText = answerText.replace(" ", "");
-        if (answerText.equals("oloibiri"))
+        if (answerText.equals("oloibiri")) {
+            questionAttempted.add("q10");
             increaseScoreByOne();
+        }
         else {
             if (!answerText.equals("")) {
-                qList.add("q10");
+                questionAttempted.add("q10");
+                questionFailed.add("q10");
             }
         }
     }
 
 
     /**
-     * Display quiz score to screen as toast
+     * Display quiz score to screen as toast if all question have been attempted else display "attempt all question" warning
      *
      * @param view
      */
     public void submitScore(View view) {
         addScoresForQ7Q10();
+        Context context = getApplicationContext();
+        if (questionAttempted.size() < 10) {
+            Toast answerAllQuestions = Toast.makeText(context, "Please attempt all question to proceed" + questionAttempted, Toast.LENGTH_SHORT);
+            answerAllQuestions.show();
+            return;
+        }
 
         //A message to indicate how good the quiz score is.
         String performMessage;
         if (quizScore == 10)
             performMessage = "Wow, you are awesome!";
         else if (quizScore > 7 && quizScore < 10)
-            performMessage = "Very good!\n Any question you missed will be marked Red";
+            performMessage = "Very good!\n Any question you missed will be marked Red****Toast.LENGTH_LONG";
         else
             performMessage = "You can do better next time\n Any question you missed will be marked Red";
         CharSequence text = "You scored " + quizScore + " out of 10 \n" + performMessage;
-        int duration = Toast.LENGTH_LONG;
 
         //Create toast to display quiz score.
-        Context context = getApplicationContext();
-        Toast scoreDisplay = Toast.makeText(context, text, duration);
+        Toast scoreDisplay = Toast.makeText(context, text, Toast.LENGTH_LONG);
         scoreDisplay.show();
 
         //Disable submit button
         Button submitButton = findViewById(R.id.submit_button);
         submitButton.setEnabled(false);
-        for (String e : qList) {
+        for (String e : questionFailed) {
             indicateInCorrect(e);
         }
     }
@@ -288,7 +316,8 @@ public class MainActivity extends Activity {
     public void resetQuiz(View view) {
         setContentView(R.layout.activity_main);
         quizScore = 0;
-        qList = new ArrayDeque<>();
+        questionAttempted = new HashSet<>();
+        questionFailed = new HashSet<>();
         radioGroupList = new LinkedList<>();
     }
 }

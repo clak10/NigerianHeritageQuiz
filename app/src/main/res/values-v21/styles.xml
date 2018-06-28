@@ -2,6 +2,6 @@
 <resources>
 
     <style name="button_Theme">
-        <item name="android:colorButtonNormal">@color/colourWelcomeBackground</item>
+        <item name="android:colorButtonNormal">@color/colourPrimaryBackground</item>
     </style>
 </resources>
