@@ -283,7 +283,7 @@ public class MainActivity extends Activity {
         addScoresForQ7Q10();
         Context context = getApplicationContext();
         if (questionAttempted.size() < 10) {
-            Toast answerAllQuestions = Toast.makeText(context, "Please attempt all question to proceed" + questionAttempted, Toast.LENGTH_SHORT);
+            Toast answerAllQuestions = Toast.makeText(context, "Please attempt all question to proceed", Toast.LENGTH_SHORT);
             answerAllQuestions.show();
             return;
         }
