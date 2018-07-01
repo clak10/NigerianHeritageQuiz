@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorAppBackground">
@@ -12,6 +13,7 @@
             android:id="@+id/main_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/main_image"
             android:scaleType="fitXY"
             android:src="@drawable/national_assembly_small" />
 
@@ -30,7 +32,8 @@
             android:text="@string/quiz_title"
             android:textColor="@android:color/white"
             android:textSize="30sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:targetApi="jelly_bean" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -45,7 +48,8 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/shadow"
                 android:elevation="2dp"
-                android:paddingBottom="2dp">
+                android:paddingBottom="2dp"
+                tools:targetApi="lollipop">
 
                 <View
                     android:id="@+id/q1_view"
@@ -63,9 +67,11 @@
                     android:fontFamily="sans-serif-medium"
                     android:paddingEnd="10dp"
                     android:paddingRight="10dp"
-                    android:text="1. What is the meaning of the green in the Nigeria flag?"
+                    android:text="@string/question_1"
                     android:textColor="@color/textColorPrimary"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    tools:ignore="RtlSymmetry"
+                    tools:targetApi="jelly_bean" />
 
                 <View
                     android:id="@+id/divider1"
@@ -98,9 +104,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Unity"
+                            android:text="@string/q1_option1"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q1_option2"
@@ -109,9 +116,10 @@
                             android:onClick="onCorrectRadioClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Agriculture"
+                            android:text="@string/q1_option2"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q1_option3"
@@ -120,9 +128,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Prosperity"
+                            android:text="@string/q1_option3"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q1_option4"
@@ -131,9 +140,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Non of the above"
+                            android:text="@string/q1_option4"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
                     </RadioGroup>
 
                     <ImageView
@@ -142,6 +152,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_weight="1"
+                        android:contentDescription="@string/flag"
                         android:src="@drawable/flag" />
 
                 </LinearLayout>
@@ -154,7 +165,8 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/shadow"
                 android:elevation="2dp"
-                android:paddingBottom="2dp">
+                android:paddingBottom="2dp"
+                tools:targetApi="lollipop">
 
                 <View
                     android:id="@+id/q2_view"
@@ -172,9 +184,10 @@
                     android:fontFamily="sans-serif-medium"
                     android:paddingEnd="10dp"
                     android:paddingRight="10dp"
-                    android:text="2. Which of these words below is not found on the Nigerian coat of arms?"
+                    android:text="@string/question_2"
                     android:textColor="@color/textColorPrimary"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    tools:ignore="RtlSymmetry" />
 
                 <View
                     android:id="@+id/divider2"
@@ -197,6 +210,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="40dp"
+                        android:layout_marginStart="40dp"
                         android:layout_weight="2">
 
                         <android.support.v7.widget.AppCompatRadioButton
@@ -206,9 +220,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Unity"
+                            android:text="@string/q2_option1"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q2_option2"
@@ -217,9 +232,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Faith"
+                            android:text="@string/q2_option2"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q2_option3"
@@ -228,9 +244,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Progress"
+                            android:text="@string/q2_option3"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q2_option4"
@@ -239,9 +256,10 @@
                             android:onClick="onCorrectRadioClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Non of the above"
+                            android:text="@string/q2_option4"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
                     </RadioGroup>
 
                     <ImageView
@@ -250,6 +268,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_weight="1"
+                        android:contentDescription="@string/nigerian_coat_of_arms"
                         android:src="@drawable/nigerian_coat_of_arms" />
 
                 </LinearLayout>
@@ -262,7 +281,8 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/shadow"
                 android:elevation="2dp"
-                android:paddingBottom="2dp">
+                android:paddingBottom="2dp"
+                tools:targetApi="lollipop">
 
                 <View
                     android:id="@+id/q3_view"
@@ -278,7 +298,7 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="3. What is the geographical area of Nigeria?"
+                    android:text="@string/question_3"
                     android:textColor="@color/textColorPrimary"
                     android:textSize="18sp" />
 
@@ -303,6 +323,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="40dp"
+                        android:layout_marginStart="40dp"
                         android:layout_weight="2">
 
                         <android.support.v7.widget.AppCompatRadioButton
@@ -312,9 +333,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="356,669sq km"
+                            android:text="@string/q3_option1"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q3_option2"
@@ -323,9 +345,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="823,768sq km"
+                            android:text="@string/q3_option2"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q3_option3"
@@ -334,9 +357,10 @@
                             android:onClick="onCorrectRadioClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="923,768sq km"
+                            android:text="@string/q3_option3"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q3_option4"
@@ -345,16 +369,19 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Non of the above"
+                            android:text="@string/q3_option4"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
                     </RadioGroup>
 
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        android:layout_marginEnd="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_weight="1"
+                        android:contentDescription="@string/map_of_nigeria"
                         android:src="@drawable/map_of_nigeria" />
 
                 </LinearLayout>
@@ -367,7 +394,8 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/shadow"
                 android:elevation="2dp"
-                android:paddingBottom="2dp">
+                android:paddingBottom="2dp"
+                tools:targetApi="lollipop">
 
                 <View
                     android:id="@+id/q4_view"
@@ -383,7 +411,7 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="4. Who discovered the river Niger?"
+                    android:text="@string/question_4"
                     android:textColor="@color/textColorPrimary"
                     android:textSize="18sp" />
 
@@ -408,6 +436,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="40dp"
+                        android:layout_marginStart="40dp"
                         android:layout_weight="2">
 
                         <android.support.v7.widget.AppCompatRadioButton
@@ -417,9 +446,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Mary Slessor"
+                            android:text="@string/q4_option1"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q4_option2"
@@ -428,9 +458,10 @@
                             android:onClick="onCorrectRadioClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Mongo Park"
+                            android:text="@string/q4_option2"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q4_option3"
@@ -439,9 +470,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Frederick Lugard"
+                            android:text="@string/q4_option3"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q4_option4"
@@ -449,9 +481,11 @@
                             android:layout_height="wrap_content"
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
-                            android:text="Non of the above"
+                            android:paddingStart="10dp"
+                            android:text="@string/q4_option4"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
                     </RadioGroup>
 
                     <ImageView
@@ -460,6 +494,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_weight="1"
+                        android:contentDescription="@string/niger_bridge"
                         android:src="@drawable/niger_bridge" />
 
                 </LinearLayout>
@@ -472,7 +507,8 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/shadow"
                 android:elevation="2dp"
-                android:paddingBottom="2dp">
+                android:paddingBottom="2dp"
+                tools:targetApi="lollipop">
 
                 <View
                     android:id="@+id/q5_view"
@@ -488,7 +524,7 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="5. Which river is the longest in Nigeria?"
+                    android:text="@string/question_5"
                     android:textColor="@color/textColorPrimary"
                     android:textSize="18sp" />
 
@@ -513,6 +549,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="40dp"
+                        android:layout_marginStart="40dp"
                         android:layout_weight="2">
 
                         <android.support.v7.widget.AppCompatRadioButton
@@ -522,9 +559,10 @@
                             android:onClick="onCorrectRadioClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Niger River"
+                            android:text="@string/q5_option1"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q5_option2"
@@ -533,9 +571,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Benue River"
+                            android:text="@string/q5_option2"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q5_option3"
@@ -544,9 +583,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Kaduna River"
+                            android:text="@string/q5_option3"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q5_option4"
@@ -555,9 +595,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Imo River"
+                            android:text="@string/q5_option4"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
                     </RadioGroup>
 
                     <ImageView
@@ -566,6 +607,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_weight="1"
+                        android:contentDescription="@string/rivers"
                         android:src="@drawable/rivers" />
 
                 </LinearLayout>
@@ -578,7 +620,8 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/shadow"
                 android:elevation="2dp"
-                android:paddingBottom="2dp">
+                android:paddingBottom="2dp"
+                tools:targetApi="lollipop">
 
                 <View
                     android:id="@+id/q6_view"
@@ -596,9 +639,11 @@
                     android:fontFamily="sans-serif-medium"
                     android:paddingEnd="10dp"
                     android:paddingRight="10dp"
-                    android:text="6. Which year did the Nigerian civil war end?"
+                    android:text="@string/question_6"
                     android:textColor="@color/textColorPrimary"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    tools:ignore="RtlSymmetry"
+                    tools:targetApi="jelly_bean" />
 
                 <View
                     android:id="@+id/divider6"
@@ -621,6 +666,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="40dp"
+                        android:layout_marginStart="40dp"
                         android:layout_weight="2">
 
                         <android.support.v7.widget.AppCompatRadioButton
@@ -630,9 +676,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="1967"
+                            android:text="@string/q6_option1"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q6_option2"
@@ -641,9 +688,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="1968"
+                            android:text="@string/q6_option2"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q6_option3"
@@ -652,9 +700,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="1969"
+                            android:text="@string/q6_option3"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q6_option4"
@@ -663,9 +712,10 @@
                             android:onClick="onCorrectRadioClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="1970"
+                            android:text="@string/q6_option4"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
                     </RadioGroup>
 
                     <ImageView
@@ -674,6 +724,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_weight="1"
+                        android:contentDescription="@string/ojukwu"
                         android:src="@drawable/civil_wars" />
 
                 </LinearLayout>
@@ -686,7 +737,8 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/shadow"
                 android:elevation="2dp"
-                android:paddingBottom="2dp">
+                android:paddingBottom="2dp"
+                tools:targetApi="lollipop">
 
                 <View
                     android:id="@+id/q7_view"
@@ -702,9 +754,10 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="7. Which of these are ancient Nigerian empire?"
+                    android:text="@string/question_7"
                     android:textColor="@color/textColorPrimary"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    tools:targetApi="jelly_bean" />
 
                 <View
                     android:id="@+id/divider7"
@@ -727,6 +780,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="40dp"
+                        android:layout_marginStart="40dp"
                         android:layout_weight="2"
                         android:orientation="vertical">
 
@@ -737,9 +791,10 @@
                             android:layout_marginTop="1dp"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Kingdom of Nri"
+                            android:text="@string/q7_option1"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <CheckBox
                             android:id="@+id/q7_option2"
@@ -747,9 +802,11 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="1dp"
                             android:paddingLeft="10dp"
-                            android:text="Ife Kingdom"
+                            android:paddingStart="10dp"
+                            android:text="@string/q7_option2"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <CheckBox
                             android:id="@+id/q7_option3"
@@ -758,9 +815,10 @@
                             android:layout_marginTop="1dp"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Kanem-Bornu Empire"
+                            android:text="@string/q7_option3"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry,TooManyViews" />
 
                         <CheckBox
                             android:id="@+id/q7_option4"
@@ -769,9 +827,10 @@
                             android:layout_marginTop="1dp"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Hausa Kingdom"
+                            android:text="@string/q7_option4"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
                     </LinearLayout>
 
                     <ImageView
@@ -780,6 +839,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_weight="1"
+                        android:contentDescription="@string/king_of_nri"
                         android:src="@drawable/kingdom_of_nri" />
 
                 </LinearLayout>
@@ -792,7 +852,8 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/shadow"
                 android:elevation="2dp"
-                android:paddingBottom="2dp">
+                android:paddingBottom="2dp"
+                tools:targetApi="lollipop">
 
                 <View
                     android:id="@+id/q8_view"
@@ -808,9 +869,10 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="8. The popular Benin ivory mask is a sculptural portrait of?"
+                    android:text="@string/question_8"
                     android:textColor="@color/textColorPrimary"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    tools:targetApi="jelly_bean" />
 
                 <View
                     android:id="@+id/divider8"
@@ -843,9 +905,10 @@
                             android:onClick="onCorrectRadioClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Queen Mother Idia"
+                            android:text="@string/q8_option1"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q8_option2"
@@ -854,9 +917,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Oba Esigie"
+                            android:text="@string/q8_option2"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q8_option3"
@@ -865,9 +929,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Oba Erediauwa"
+                            android:text="@string/q8_option3"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q8_option4"
@@ -876,9 +941,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Oduduwa"
+                            android:text="@string/q8_option4"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
                     </RadioGroup>
 
                     <ImageView
@@ -887,6 +953,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_weight="1"
+                        android:contentDescription="@string/queen_mother_mask"
                         android:src="@drawable/queen_mother_mask" />
 
                 </LinearLayout>
@@ -899,7 +966,8 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/shadow"
                 android:elevation="2dp"
-                android:paddingBottom="2dp">
+                android:paddingBottom="2dp"
+                tools:targetApi="lollipop">
 
                 <View
                     android:id="@+id/q9_view"
@@ -915,7 +983,7 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="9. Who were the first Europeans to trade in Nigeria?"
+                    android:text="@string/question_9"
                     android:textColor="@color/textColorPrimary"
                     android:textSize="18sp" />
 
@@ -940,6 +1008,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="40dp"
+                        android:layout_marginStart="40dp"
                         android:layout_weight="2">
 
                         <android.support.v7.widget.AppCompatRadioButton
@@ -949,9 +1018,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="English"
+                            android:text="@string/q9_option1"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q9_option2"
@@ -960,10 +1030,11 @@
                             android:onClick="onCorrectRadioClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Portuguese"
+                            android:text="@string/q9_option2"
 
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q9_option3"
@@ -972,9 +1043,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Spanish"
+                            android:text="@string/q9_option3"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/q9_option4"
@@ -983,9 +1055,10 @@
                             android:onClick="onWrongRadioBoxClicked"
                             android:paddingLeft="10dp"
                             android:paddingStart="10dp"
-                            android:text="Non of the above"
+                            android:text="@string/q9_option4"
                             android:textColor="@color/textColorSecondary"
-                            android:textSize="17sp" />
+                            android:textSize="17sp"
+                            tools:ignore="RtlSymmetry" />
                     </RadioGroup>
 
                     <ImageView
@@ -993,6 +1066,8 @@
                         android:layout_height="match_parent"
                         android:layout_marginRight="16dp"
                         android:layout_weight="1"
+                        android:layout_marginEnd="16dp"
+                        android:contentDescription="@string/euro_traders"
                         android:src="@drawable/euro_traders" />
 
                 </LinearLayout>
@@ -1005,7 +1080,8 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/shadow"
                 android:elevation="2dp"
-                android:paddingBottom="2dp">
+                android:paddingBottom="2dp"
+                tools:targetApi="lollipop">
 
                 <View
                     android:id="@+id/q10_view"
@@ -1021,7 +1097,7 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="10. Where was the first commercial oilfield in Nigeria located?"
+                    android:text="@string/question_10"
                     android:textColor="@color/textColorPrimary"
                     android:textSize="18sp" />
 
@@ -1047,6 +1123,7 @@
                     android:hint="@string/edit_hint"
                     android:maxLines="1"
                     android:textColor="@color/textColorSecondary"
+                    android:inputType="text"
                     android:textSize="17sp" />
 
                 <TextView
@@ -1054,6 +1131,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/q10_EditText"
+                    android:background="@color/colorTextBackground"
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="40dp" />
 

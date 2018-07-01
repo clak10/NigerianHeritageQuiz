@@ -9,4 +9,5 @@
     <color name="colorAccentDark">#33691e</color>
     <color name="colorInCorrect">#e57373</color>
     <color name="colorAppBackground">#eeeeee</color>
+    <color name="colorTextBackground">#bbffffff</color>
 </resources>

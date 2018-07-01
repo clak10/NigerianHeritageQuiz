@@ -14,12 +14,16 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.Objects;
 import java.util.Set;
 
 public class MainActivity extends Activity {
     static final String STATE_SCORE = "playerScore";
+    static final String STATE_QUESTION_ATTEMPTED = "questionAttempted";
+    static final String STATE_QUESTION_FAILED = "questionFailed";
     int quizScore;
     private LinkedList<View> radioGroupList;
     private Set<String> questionAttempted;
@@ -40,12 +44,18 @@ public class MainActivity extends Activity {
 
         // Restore state members from saved instance
         quizScore = savedInstanceState.getInt(STATE_SCORE);
+        questionAttempted.addAll(Arrays.asList(Objects.requireNonNull(savedInstanceState.getStringArray(STATE_QUESTION_ATTEMPTED))));
+        questionFailed.addAll(Arrays.asList(Objects.requireNonNull(savedInstanceState.getStringArray(STATE_QUESTION_FAILED))));
     }
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         // Save the user's current quiz score
+        String[] questionAttemptedArray = questionAttempted.toArray(new String[0]);
+        String[] questionFailedArray = questionFailed.toArray(new String[0]);
         savedInstanceState.putInt(STATE_SCORE, quizScore);
+        savedInstanceState.putStringArray(STATE_QUESTION_ATTEMPTED, questionAttemptedArray);
+        savedInstanceState.putStringArray(STATE_QUESTION_FAILED, questionFailedArray);
 
         super.onSaveInstanceState(savedInstanceState);
     }
@@ -67,13 +77,14 @@ public class MainActivity extends Activity {
     /**
      * Increase quiz score by only one unit if the correct radio button is checked
      *
-     * @param view
+     * @param view view
      */
     public void onCorrectRadioClicked(View view) {
         RadioButton currentRB = (RadioButton) view;
-        if (!radioGroupList.contains(currentRB.getParent())) {
+        RadioGroup radioGroup = (RadioGroup) currentRB.getParent();
+        if (!radioGroupList.contains(radioGroup)) {
             increaseScoreByOne();
-            radioGroupList.add((RadioGroup) currentRB.getParent());
+            radioGroupList.add(radioGroup);
         }
         //Removes question with correct answer once only.
         int idNumber = currentRB.getId();
@@ -114,13 +125,14 @@ public class MainActivity extends Activity {
     /**
      * Decrease quiz score by only one unit if the incorrect radio button is checked
      *
-     * @param view
+     * @param view view
      */
     public void onWrongRadioBoxClicked(View view) {
         RadioButton currentRB = (RadioButton) view;
-        if (radioGroupList.contains(currentRB.getParent())) {
+        RadioGroup radioGroup = (RadioGroup) currentRB.getParent();
+        if (radioGroupList.contains(radioGroup)) {
             decreaseScoreByOne();
-            radioGroupList.remove(currentRB.getParent());
+            radioGroupList.remove(radioGroup);
         }
         //Registers question with incorrect answer once only.
         int idNumber = currentRB.getId();
@@ -277,7 +289,8 @@ public class MainActivity extends Activity {
     /**
      * Display quiz score to screen as toast if all question have been attempted else display "attempt all question" warning
      *
-     * @param view
+     * @param view view
+     *
      */
     public void submitScore(View view) {
         addScoresForQ7Q10();
@@ -293,7 +306,7 @@ public class MainActivity extends Activity {
         if (quizScore == 10)
             performMessage = "Wow, you are awesome!";
         else if (quizScore > 7 && quizScore < 10)
-            performMessage = "Very good!\n Any question you missed will be marked Red****Toast.LENGTH_LONG";
+            performMessage = "Very good!\n Any question you missed will be marked Red";
         else
             performMessage = "You can do better next time\n Any question you missed will be marked Red";
         CharSequence text = "You scored " + quizScore + " out of 10 \n" + performMessage;
