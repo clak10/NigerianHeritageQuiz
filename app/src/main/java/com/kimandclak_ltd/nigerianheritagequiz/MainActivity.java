@@ -28,6 +28,8 @@ public class MainActivity extends Activity {
     private LinkedList<View> radioGroupList;
     private Set<String> questionAttempted;
     private Set<String> questionFailed;
+    Button submitButton;
+    Button resetButton;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,6 +39,14 @@ public class MainActivity extends Activity {
         questionFailed = new HashSet<>();
         questionAttempted = new HashSet<>();
         radioGroupList = new LinkedList<>();
+        activateButtons();
+    }
+
+    private void activateButtons() {
+        submitButton = findViewById(R.id.submit_button);
+        submitButton.setOnClickListener(e -> submitScore());
+        resetButton = findViewById(R.id.reset_button);
+        resetButton.setOnClickListener(e -> resetQuiz());
     }
 
     public void onRestoreInstanceState(Bundle savedInstanceState) {
@@ -289,10 +299,8 @@ public class MainActivity extends Activity {
     /**
      * Display quiz score to screen as toast if all question have been attempted else display "attempt all question" warning
      *
-     * @param view view
-     *
      */
-    public void submitScore(View view) {
+    public void submitScore() {
         addScoresForQ7Q10();
         Context context = getApplicationContext();
         if (questionAttempted.size() < 10) {
@@ -326,11 +334,12 @@ public class MainActivity extends Activity {
     /**
      * Reset the layout and the score
      */
-    public void resetQuiz(View view) {
+    public void resetQuiz() {
         setContentView(R.layout.activity_main);
         quizScore = 0;
         questionAttempted = new HashSet<>();
         questionFailed = new HashSet<>();
         radioGroupList = new LinkedList<>();
+        activateButtons();
     }
 }
