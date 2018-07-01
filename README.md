@@ -1,6 +1,6 @@
 # NigerianHeritageQuiz
 
-APK file on https://drive.google.com/open?id=14N97Hr1REApwGXavFW1j8N1ECTTjG9PU
+APK file on https://drive.google.com/file/d/1cvHGyF09DDdhis2nqVsbzLXAXloqro9l/view?usp=sharing
 
 Introduction:
 This app was developed for the Android Basics course #7DaysofCodeChallenge which is part of the Google Africa Challenge scholarship program with Andela and Udacity.
